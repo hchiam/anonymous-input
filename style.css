@@ -1,0 +1,31 @@
+* {
+  background: rgb(32,32,32);
+  color: whitesmoke;
+  font-family: avenir, arial, helvetica, sans-serif;
+  font-size: large;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+body {
+  text-align: center;
+}
+
+#box {
+  margin-top: 30vh;
+}
+
+input:hover, button:hover {
+  background: lime;
+  color: black;
+}
+
+#input {
+  width: 50vw;
+  text-align: center;
+}
+
+button {
+  visibility: hidden;
+}
