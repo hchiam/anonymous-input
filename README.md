@@ -11,12 +11,12 @@ A desktop app built using frontend web technologies (JS/HTML/CSS). Powered by El
 
 ## Useful CLI commands
 
-`npm install` or `yarn`
+`yarn` or `npm install` -> initial one-time setup
 
-`npm start` or `yarn start` -> run locally
+`yarn start` or `npm run start` -> run the app locally from CLI (no file minification/build performed)
 
-`npm build` or `yarn build` -> get executable file, e.g.: `anonymous-input-darwin-x64/anonymous-input.app`
+`yarn build` or `npm run build` -> get executable file, e.g.: `anonymous-input-darwin-x64/anonymous-input.app`, which you can run by clicking on it
 
-`npm test` or `yarn test`
+`yarn test` or `npm run test` -> run automated tests
 
-`npm manual-test` or `yarn manual-test`
+`yarn test` or `npm run manual-test` -> run the same version of the app that the automated tests run, but one that you can test manually
