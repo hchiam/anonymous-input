@@ -1,3 +1,5 @@
+# Example passing build: https://travis-ci.org/hchiam/anonymous-input/builds/636070808
+
 os:
   - osx
 
