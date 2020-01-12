@@ -12,7 +12,8 @@ cache:
     - node_modules
 
 before_install:
-  - yarn disable-obfuscation
+  - sudo rm dictionary.js
+  - sudo rm obfuscationMapping.js
 
 before_script:
   - chmod +x travis-build.sh # give permission to execute
