@@ -5,7 +5,7 @@
   font-size: large;
   padding: 10px;
   border-radius: 10px;
-  transition: 0.5s;
+  transition: 0.25s;
 }
 
 body {
@@ -13,7 +13,7 @@ body {
 }
 
 #box {
-  margin-top: 30vh;
+  margin-top: 25vh;
 }
 
 input:hover, button:hover {
@@ -28,4 +28,9 @@ input:hover, button:hover {
 
 button {
   visibility: hidden;
+}
+
+#extract button:not(#lock):not(#clear-data) {
+  border: transparent;
+  color: rgb(32,32,32);
 }
