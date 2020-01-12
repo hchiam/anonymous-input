@@ -1,21 +1,15 @@
 # automatic testing with Travis CI!
 
 os:
-  - linux
+  - osx
 
 language: node_js
 
 node_js:
-  - 12
+  - "lts/*"
 
 addons:
   chrome: stable
-  apt:
-    packages:
-      - xvfb
-
-services:
-  - xvfb
 
 cache:
   yarn: true
@@ -23,19 +17,11 @@ cache:
     - node_modules
 
 before_script:
-  - export CHROME_BIN=chromium-browser
-  - export DISPLAY=:'99.0'
-  - Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
-  - sh -e /etc/init.d/xvfb start
-  - sleep 3
-  - node --version
-  - npm --version
+  - travis-build.sh
   - yarn
 
 script:
   - yarn test
-
-  # https://electronjs.org/docs/tutorial/testing-on-headless-ci
 
 notifications:
   email:
