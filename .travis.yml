@@ -16,8 +16,6 @@ before_script:
   - ./travis-build.sh
 
 script:
-  - sudo rm dictionary.js
-  - sudo rm obfuscationMapping.js
   - yarn test
 
 notifications:
