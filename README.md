@@ -4,6 +4,13 @@
 
 A desktop app built using frontend web technologies (JS/HTML/CSS). Powered by Electron.js. Automatically tested with Travis CI, Spectron, and mocha. Built with electron-packager and npm/yarn. To learn more: [github.com/hchiam/learning](https://github.com/hchiam/learning#learning)
 
+## Optional files (you can add them for local testing/use)
+
+* `dictionary.js`: `dictionary = ['prompt,answer', ...];`
+* `obfuscationMapping.js`: `obfuscationMapping = {'a':'...', ...};`
+
+## Useful CLI commands
+
 `npm install` or `yarn`
 
 `npm start` or `yarn start` -> run locally
@@ -13,8 +20,3 @@ A desktop app built using frontend web technologies (JS/HTML/CSS). Powered by El
 `npm test` or `yarn test`
 
 `npm manual-test` or `yarn manual-test`
-
-## Optional files (you can add them for local testing/use)
-
-* `dictionary.js`: `dictionary = ['prompt,answer', ...];`
-* `obfuscationMapping.js`: `obfuscationMapping = {'a':'...', ...};`
