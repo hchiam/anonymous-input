@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/hchiam/anonymous-input.svg?branch=master)](https://travis-ci.org/hchiam/anonymous-input)
+
 `npm install` or `yarn`
 
 `npm start` or `yarn start` -> run locally
