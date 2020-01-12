@@ -9,7 +9,7 @@
     "disable-obfuscation": "mv dictionary.js dictionary_disabled.js; mv obfuscationMapping.js obfuscationMapping_disabled.js;",
     "enable-obfuscation": "mv dictionary_disabled.js dictionary.js; mv obfuscationMapping_disabled.js obfuscationMapping.js;",
     "manual-test": "(yarn disable-obfuscation; yarn start; yarn enable-obfuscation;) || (npm run disable-obfuscation; npm run start; npm run enable-obfuscation;)",
-    "test": "(yarn disable-obfuscation; mocha; yarn enable-obfuscation;) || (npm run disable-obfuscation; mocha; npm run enable-obfuscation;)",
+    "test": "(yarn disable-obfuscation; mocha; yarn enable-obfuscation;) || (npm run disable-obfuscation; mocha; npm run enable-obfuscation;)"
   },
   "repository": "https://github.com/hchiam/anonymous-input",
   "keywords": [],
