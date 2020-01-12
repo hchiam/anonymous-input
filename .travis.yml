@@ -11,16 +11,15 @@ cache:
   directories:
     - node_modules
 
-before_install:
-  - sudo rm dictionary.js
-  - sudo rm obfuscationMapping.js
-
 before_script:
   - chmod +x travis-build.sh # give permission to execute
   - ./travis-build.sh
-  - yarn
+  - sudo rm dictionary.js
+  - sudo rm obfuscationMapping.js
 
 script:
+  - sudo rm dictionary.js
+  - sudo rm obfuscationMapping.js
   - yarn test
 
 notifications:
