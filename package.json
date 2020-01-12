@@ -6,10 +6,11 @@
   "scripts": {
     "start": "electron .",
     "build": "electron-packager . anonymous-input",
-    "disable-obfuscation": "cp dictionary.js dictionary_disabled.js; rm dictionary.js; cp obfuscationMapping.js obfuscationMapping_disabled.js; rm obfuscationMapping.js;",
-    "enable-obfuscation": "cp dictionary_disabled.js dictionary.js; rm dictionary_disabled.js; cp obfuscationMapping_disabled.js obfuscationMapping.js; rm obfuscationMapping_disabled.js;",
+    "disable-obfuscation": "mv dictionary.js dictionary_disabled.js; mv obfuscationMapping.js obfuscationMapping_disabled.js;",
+    "enable-obfuscation": "mv dictionary_disabled.js dictionary.js; mv obfuscationMapping_disabled.js obfuscationMapping.js;",
     "manual-test": "(yarn disable-obfuscation; yarn start; yarn enable-obfuscation;) || (npm run disable-obfuscation; npm run start; npm run enable-obfuscation;)",
-    "test": "(yarn disable-obfuscation; mocha; yarn enable-obfuscation;) || (npm run disable-obfuscation; mocha; npm run enable-obfuscation;)"
+    "test": "(yarn disable-obfuscation; mocha; yarn enable-obfuscation;) || (npm run disable-obfuscation; mocha; npm run enable-obfuscation;)",
+    "travis-test": "mocha"
   },
   "repository": "https://github.com/hchiam/anonymous-input",
   "keywords": [],
