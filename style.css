@@ -30,7 +30,7 @@ button {
   visibility: hidden;
 }
 
-#extract button:not(#lock):not(#clear-data) {
+#extract button:not(#lock) {
   border: transparent;
   color: rgb(32,32,32);
 }

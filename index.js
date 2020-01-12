@@ -28,6 +28,7 @@ function enter() {
   }
   document.getElementById('input').value = '';
   document.getElementById('input-button').style.visibility = 'hidden';
+  document.getElementById('input').focus();
 };
 
 function inputEnter(e) {
@@ -67,7 +68,7 @@ function showData() {
 };
 
 let password = null;
-// const dictionary = ['answer,prompt', ...];
+let dictionary = ['prompt,answer'];
 function generatePassword() {
   const i = getRandomNumber(0, dictionary.length);
   const entry = dictionary[i].split(',');
@@ -80,9 +81,13 @@ function requirePassword() {
   document.getElementById('get-data').style.visibility = 'hidden';
   document.getElementById('password').value = '';
   document.getElementById('password').style.visibility = 'visible';
+  
   document.getElementById('password-prompt').style.visibility = 'visible';
   document.getElementById('lock').style.visibility = 'hidden';
   generatePassword();
+  window.setTimeout(function () {
+    document.getElementById('password').focus();
+  }, 100);
 };
 
 function lock() {
@@ -94,6 +99,7 @@ function lock() {
   document.getElementById('output').style.visibility = 'hidden';
   document.getElementById('lock').style.visibility = 'hidden';
   document.getElementById('clear-data').style.visibility = 'hidden';
+  document.getElementById('input').focus();
 };
 
 function checkPassword() {
@@ -111,7 +117,7 @@ function getRandomNumber(min, max) {
   return min + Math.floor(Math.random() * max);
 }
 
-// const obfuscationMapping = {'a':'...', ...};
+let obfuscationMapping = {'a':'a','b':'b','c':'c','d':'d','e':'e','f':'f','g':'g','h':'h','i':'i','j':'j','k':'k','l':'l','m':'m','n':'n','o':'o','p':'p','q':'q','r':'r','s':'s','t':'t','u':'u','v':'v','w':'w','x':'x','y':'y','z':'z',};
 function obfuscatePrompt(prompt) {
   let newPrompt = '';
   let useObfuscation = true;

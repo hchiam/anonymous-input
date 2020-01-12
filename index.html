@@ -6,13 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Anonymous input</title>
   <link rel="stylesheet" href="style.css">
+  <script src="index.js"></script>
   <script src="dictionary.js"></script>
   <script src="obfuscationMapping.js"></script>
-  <script src="index.js"></script>
 </head>
 <body>
   <div id="box">
-    <input id='input' type="text" onkeypress="inputEnter(event)" oninput="showButtons()" placeholder="Type here">
+    <input id='input' type="text" onkeypress="inputEnter(event)" oninput="showButtons()" placeholder="Type here" autofocus>
     <br/>
     <br/>
     <button id="input-button" onclick="enter()">Hit to enter</button>
@@ -27,7 +27,7 @@
            type="password"
            style="visibility: hidden;"
            autocomplete="off"
-           placeholder="hwtvddzynfinwn">
+           placeholder="Type here">
     <button id="get-data" onclick="requirePassword()">Get data</button>
   </div>
 </body>

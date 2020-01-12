@@ -5,7 +5,11 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-packager . anonymous-input"
+    "build": "electron-packager . anonymous-input",
+    "disable-obfuscation": "mv dictionary.js dictionary_disabled.js; mv obfuscationMapping.js obfuscationMapping_disabled.js;",
+    "enable-obfuscation": "mv dictionary_disabled.js dictionary.js; mv obfuscationMapping_disabled.js obfuscationMapping.js;",
+    "manual-test": "(yarn disable-obfuscation; yarn start; yarn enable-obfuscation;) || (npm disable-obfuscation; npm start; npm enable-obfuscation;)",
+    "test": "(yarn disable-obfuscation; mocha; yarn enable-obfuscation;) || (npm disable-obfuscation; mocha; npm enable-obfuscation;)"
   },
   "repository": "https://github.com/hchiam/anonymous-input",
   "keywords": [],
@@ -13,6 +17,8 @@
   "license": "MIT",
   "devDependencies": {
     "electron": "^7.1.5",
-    "electron-packager": "^14.1.1"
+    "electron-packager": "^14.1.1",
+    "mocha": "^7.0.0",
+    "spectron": "^9.0.0"
   }
 }

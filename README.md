@@ -4,7 +4,11 @@
 
 `npm build` or `yarn build` -> get executable file, e.g.: `anonymous-input-darwin-x64/anonymous-input.app`
 
-Need:
+`npm test` or `yarn test`
 
-* `dictionary.js`: `const dictionary = ['answer,prompt', ...];`
-* `obfuscationMapping.js`: `const obfuscationMapping = {'a':'...', ...};`
+`npm manual-test` or `yarn manual-test`
+
+Optional:
+
+* `dictionary.js`: `dictionary = ['prompt,answer', ...];`
+* `obfuscationMapping.js`: `obfuscationMapping = {'a':'...', ...};`
