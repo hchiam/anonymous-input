@@ -7,13 +7,28 @@
   <title>Anonymous input</title>
   <link rel="stylesheet" href="style.css">
   <script src="index.js"></script>
+  <script src="dictionary.js"></script>
+  <script src="obfuscationMapping.js"></script>
 </head>
 <body>
   <div id="box">
-    <input id='input' type="text" onkeypress="inputEnter(event)" oninput="showButton()" placeholder="Type here">
+    <input id='input' type="text" onkeypress="inputEnter(event)" oninput="showButtons()" placeholder="Type here" autofocus>
     <br/>
     <br/>
-    <button id="button" onclick="enter()">Hit to enter</button>
+    <button id="input-button" onclick="enter()">Hit to enter</button>
+  </div>
+  <div id="extract">
+    <textarea id="output" cols="30" rows="5" style="visibility: hidden;" disabled="true"></textarea>
+    <button id="lock" onclick="lock()" style="visibility: hidden;">Lock</button>
+    <button id="clear-data" onclick="clearData()" style="visibility: hidden;">Clear data</button>
+    <p id="password-prompt" style="visibility: hidden;"></p>
+    <input id="password"
+           oninput="checkPassword()"
+           type="password"
+           style="visibility: hidden;"
+           autocomplete="off"
+           placeholder="Type here">
+    <button id="get-data" onclick="requirePassword()">Get data</button>
   </div>
 </body>
 </html>
