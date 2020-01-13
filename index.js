@@ -1,4 +1,6 @@
-var data = [];
+/* eslint-disable require-jsdoc, no-unused-vars */
+
+let data = [];
 const myLocalStorage = window.localStorage.getItem('anon-responses');
 if (myLocalStorage && myLocalStorage.length && myLocalStorage.length > 0) {
   data = JSON.parse(window.localStorage.getItem('anon-responses'));
@@ -48,7 +50,8 @@ function shuffle(array) { // Fisher-Yates shuffle
   // i = from right to left
   for (let i = array.length - 1; i > 0; i--) {
     // j = any of the "unvisited" indices to the left of i
-    const j = Math.floor(Math.random() * (i + 1)); // range from 0 to i (not 1 since floor of random 0 to 0.999...)
+    // Range from 0 to i (not 1 since floor of random 0 to 0.999...):
+    const j = Math.floor(Math.random() * (i + 1));
     // swap at i and j:
     const temp = array[i];
     array[i] = array[j];
@@ -68,6 +71,7 @@ function showData() {
 };
 
 let password = null;
+// eslint-disable-next-line prefer-const
 let dictionary = ['prompt,answer'];
 function generatePassword() {
   const i = getRandomNumber(0, dictionary.length);
@@ -81,11 +85,11 @@ function requirePassword() {
   document.getElementById('get-data').style.visibility = 'hidden';
   document.getElementById('password').value = '';
   document.getElementById('password').style.visibility = 'visible';
-  
+
   document.getElementById('password-prompt').style.visibility = 'visible';
   document.getElementById('lock').style.visibility = 'hidden';
   generatePassword();
-  window.setTimeout(function () {
+  window.setTimeout(function() {
     document.getElementById('password').focus();
   }, 100);
 };
@@ -117,7 +121,12 @@ function getRandomNumber(min, max) {
   return min + Math.floor(Math.random() * max);
 }
 
-let obfuscationMapping = {'a':'a','b':'b','c':'c','d':'d','e':'e','f':'f','g':'g','h':'h','i':'i','j':'j','k':'k','l':'l','m':'m','n':'n','o':'o','p':'p','q':'q','r':'r','s':'s','t':'t','u':'u','v':'v','w':'w','x':'x','y':'y','z':'z',};
+// eslint-disable-next-line prefer-const
+let obfuscationMapping = {'a': 'a', 'b': 'b', 'c': 'c', 'd': 'd',
+  'e': 'e', 'f': 'f', 'g': 'g', 'h': 'h', 'i': 'i', 'j': 'j', 'k': 'k',
+  'l': 'l', 'm': 'm', 'n': 'n', 'o': 'o', 'p': 'p', 'q': 'q', 'r': 'r',
+  's': 's', 't': 't', 'u': 'u', 'v': 'v', 'w': 'w', 'x': 'x', 'y': 'y',
+  'z': 'z'};
 function obfuscatePrompt(prompt) {
   let newPrompt = '';
   let useObfuscation = true;

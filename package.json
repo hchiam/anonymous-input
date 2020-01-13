@@ -5,9 +5,10 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build": "yarn minify || npm run minify; electron-packager . anonymous-input",
-    "test": "yarn minify || npm run minify; (yarn disable-obfuscation; mocha; yarn enable-obfuscation;) || (npm run disable-obfuscation; mocha; npm run enable-obfuscation;)",
-    "manual-test": "yarn minify || npm run minify; (yarn disable-obfuscation; yarn start; yarn enable-obfuscation;) || (npm run disable-obfuscation; npm run start; npm run enable-obfuscation;);",
+    "build": "yarn lint || npm run lint; yarn minify || npm run minify; electron-packager . anonymous-input",
+    "test": "yarn build || npm run build; (yarn disable-obfuscation; mocha; yarn enable-obfuscation;) || (npm run disable-obfuscation; mocha; npm run enable-obfuscation;)",
+    "manual-test": "yarn build || npm run build; (yarn disable-obfuscation; yarn start; yarn enable-obfuscation;) || (npm run disable-obfuscation; npm run start; npm run enable-obfuscation;);",
+    "lint": "eslint --fix *.js",
     "minify": "bash minify.sh",
     "disable-obfuscation": "mv dictionary.js dictionary_disabled.js || true; mv obfuscationMapping.js obfuscationMapping_disabled.js || true;",
     "enable-obfuscation": "mv dictionary_disabled.js dictionary.js || true; mv obfuscationMapping_disabled.js obfuscationMapping.js || true;"
@@ -19,6 +20,8 @@
   "devDependencies": {
     "electron": "^7.1.5",
     "electron-packager": "^14.1.1",
+    "eslint": "^6.8.0",
+    "eslint-config-google": "^0.14.0",
     "minify": "^5.0.0",
     "mocha": "^7.0.0",
     "spectron": "^9.0.0"
