@@ -4,7 +4,7 @@
 
 A desktop app built using frontend web technologies (JS/HTML/CSS). Powered by Electron.js. Automatically tested with Travis CI, Spectron, and mocha. Built with electron-packager and npm/yarn. To learn more: [github.com/hchiam/learning](https://github.com/hchiam/learning#learning)
 
-[anonymous-input-darwin-x64.zip](https://github.com/hchiam/anonymous-input/releases)
+Download: [anonymous-input-darwin-x64.zip](https://github.com/hchiam/anonymous-input/releases)
 
 ## Optional files (you can add them for local testing/use)
 
