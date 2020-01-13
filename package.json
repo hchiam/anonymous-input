@@ -8,6 +8,7 @@
     "build": "yarn lint || npm run lint; yarn minify || npm run minify; electron-packager . anonymous-input",
     "test": "yarn build || npm run build; (yarn disable-obfuscation; mocha; yarn enable-obfuscation;) || (npm run disable-obfuscation; mocha; npm run enable-obfuscation;)",
     "manual-test": "yarn build || npm run build; (yarn disable-obfuscation; yarn start; yarn enable-obfuscation;) || (npm run disable-obfuscation; npm run start; npm run enable-obfuscation;);",
+    "zip": "FOLDER_TO_ZIP=\"$(find . -maxdepth 1 -type d -name 'anonymous-input-*' -print -quit)\"; zip -r \"${FOLDER_TO_ZIP}.zip\" \"${FOLDER_TO_ZIP}\";",
     "lint": "eslint --fix *.js",
     "minify": "bash minify.sh",
     "disable-obfuscation": "mv dictionary.js dictionary_disabled.js || true; mv obfuscationMapping.js obfuscationMapping_disabled.js || true;",
