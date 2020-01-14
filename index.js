@@ -147,3 +147,7 @@ function obfuscatePrompt(prompt) {
   }
   return newPrompt;
 }
+
+module.exports = {
+  getRandomNumber, // for unit test
+};
