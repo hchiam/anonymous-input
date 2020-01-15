@@ -4,3 +4,4 @@ dictionary.js
 .DS_Store
 anonymous-input-darwin-x64
 *.zip
+coverage
