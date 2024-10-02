@@ -2,7 +2,7 @@
 
 ![version](https://img.shields.io/github/release/hchiam/anonymous-input) [![Build Status](https://travis-ci.org/hchiam/anonymous-input.svg?branch=master)](https://travis-ci.org/hchiam/anonymous-input) [![Coverage Status](https://coveralls.io/repos/github/hchiam/anonymous-input/badge.svg?branch=master)](https://coveralls.io/github/hchiam/anonymous-input?branch=master)
 
-A desktop app built using frontend web technologies (JS/HTML/CSS). Powered by Electron.js. Automatically tested with Travis CI, Spectron, and mocha. Built with electron-packager and npm/yarn. To learn more: [github.com/hchiam/learning](https://github.com/hchiam/learning#learning)
+A desktop app built using frontend web technologies (JS/HTML/CSS). Powered by Electron.js. Automatically tested with Travis CI, Spectron, and mocha. Built with electron-packager and npm/yarn. This project is old - if I were to rewrite this, I'd use [Tauri](https://github.com/hchiam/learning-tauri) instead of Electron. To learn more: [github.com/hchiam/learning](https://github.com/hchiam/learning#learning)
 
 Download: [anonymous-input-darwin-x64.zip](https://github.com/hchiam/anonymous-input/releases)
 
